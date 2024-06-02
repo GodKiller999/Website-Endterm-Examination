@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Monitors</title>
+        <link rel="stylesheet" href="/Endterm/Website-Endterm-Examination-main/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Shop - Monitors</h1>
+            <p>Select your monitors and checkout</p>
+        </div>
+        <div class="grid">
+            <!-- Product 1 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Monitor/Monitor Ultra.jpg" alt="Monitor Ultra">
+                <p>Monitor Ultra</p>
+                <p class="price">Price: ₱3000</p>
+                <button onclick="updateQuantity('qty1', -1)">-</button>
+                <input type="number" id="qty1" value="0" min="0">
+                <button onclick="updateQuantity('qty1', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Monitor Ultra', 'qty1', 3000)">Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Monitor/Apple Studio Display.jfif" alt="Apple Studio Display">
+                <p>Apple Studio Display</p>
+                <p class="price">Price: ₱4500</p>
+                <button onclick="updateQuantity('qty2', -1)">-</button>
+                <input type="number" id="qty2" value="0" min="0">
+                <button onclick="updateQuantity('qty2', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Apple Studio Display', 'qty2', 4500)">Add to Cart</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Monitor/Asus ProArt PA32UCG-K.png" alt="Asus ProArt PA32UCG-K">
+                <p>Asus ProArt PA32UCG-K</p>
+                <p class="price">Price: ₱2800</p>
+                <button onclick="updateQuantity('qty3', -1)">-</button>
+                <input type="number" id="qty3" value="0" min="0">
+                <button onclick="updateQuantity('qty3', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Asus ProArt PA32UCG-K', 'qty3', 2800)">Add to Cart</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Monitor/Asus TUF Gaming VG249Q1A.png" alt="Asus TUF Gaming VG249Q1A">
+                <p>Asus TUF Gaming VG249Q1A</p>
+                <p class="price">Price: ₱3800</p>
+                <button onclick="updateQuantity('qty4', -1)">-</button>
+                <input type="number" id="qty4" value="0" min="0">
+                <button onclick="updateQuantity('qty4', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Asus TUF Gaming VG249Q1A', 'qty4', 3800)">Add to Cart</button>
+            </div>
+            <!-- Product 5 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Monitor/Dell UltraSharp U4025QW.avif" alt="Dell UltraSharp U4025QW">
+                <p>Dell UltraSharp U4025QW</p>
+                <p class="price">Price: ₱4200</p>
+                <button onclick="updateQuantity('qty5', -1)">-</button>
+                <input type="number" id="qty5" value="0" min="0">
+                <button onclick="updateQuantity('qty5', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Dell UltraSharp U4025QW', 'qty5', 4200)">Add to Cart</button>
+            </div>
+            <!-- Product 6 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Monitor/monitor-alienware-2725df-black-gallery-1-mg.avif" alt="Alienware Monitor">
+                <p>Alienware Monitor</p>
+                <p class="price">Price: ₱3200</p>
+                <button onclick="updateQuantity('qty6', -1)">-</button>
+                <input type="number" id="qty6" value="0" min="0">
+                <button onclick="updateQuantity('qty6', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Alienware Monitor', 'qty6', 3200)">Add to Cart</button>
+            </div>
+            <!-- Product 7 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Monitor/Samsung M8 Smart Monitor.webp" alt="Samsung M8 Smart Monitor">
+                <p>Samsung M8 Smart Monitor</p>
+                <p class="price">Price: ₱3700</p>
+                <button onclick="updateQuantity('qty7', -1)">-</button>
+                <input type="number" id="qty7" value="0" min="0">
+                <button onclick="updateQuantity('qty7', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Samsung M8 Smart Monitor', 'qty7', 3700)">Add to Cart</button>
+            </div>
+            <!-- Product 8 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Monitor/Samsung Odyssey Neo G9.webp" alt="SamsungOdyssey Neo G9">
+                <p>Samsung Odyssey Neo G9</p>
+                <p class="price">Price: ₱4900</p>
+                <button onclick="updateQuantity('qty8', -1)">-</button>
+                <input type="number" id="qty8" value="0" min="0">
+                <button onclick="updateQuantity('qty8', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Samsung Odyssey Neo G9', 'qty8', 4900)">Add to Cart</button>
+                </div>
+                </div>
+                <div class="checkout">
+                <button onclick="checkout()">Checkout</button></br></br>
+                <a href="ProductList.html"><button>Back to Product List</button></a> <!-- Back button -->
+                </div>
+                <div class="footer">
+                    <p>If you have any questions, please contact us at PalmaKills.com</p>
+                </div>
+                </div>
+                <script src="/Endterm/Website-Endterm-Examination-main/script.js"></script>
+
+                </body>
+                </html>

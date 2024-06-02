@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="/Endterm/Website-Endterm-Examination-main/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Shop</h1>
+            <p>Select your items and checkout</p>
+        </div>
+        <div class="grid">
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Keyboards/Asus ROG Azoth.jfif" alt="Asus ROG Azoth">
+                <p>Asus ROG Azoth</p>
+                <p class="price">₱7,500</p>
+                <button onclick="updateQuantity('qty1', -1)">-</button>
+                <input type="number" id="qty1" value="0" min="0">
+                <button onclick="updateQuantity('qty1', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Asus ROG Azoth', 'qty1', 7500)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Keyboards/Corsair K70 Pro Mini Wireless.jfif" alt="Corsair K70 Pro Mini Wireless">
+                <p>Corsair K70 Pro Mini Wireless</p>
+                <p class="price">₱8,200</p>
+                <button onclick="updateQuantity('qty2', -1)">-</button>
+                <input type="number" id="qty2" value="0" min="0">
+                <button onclick="updateQuantity('qty2', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Corsair K70 Pro Mini Wireless', 'qty2', 8200)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Keyboards/HyperX Alloy Origins 60.webp" alt="HyperX Alloy Origins 60">
+                <p>HyperX Alloy Origins 60</p>
+                <p class="price">₱5,900</p>
+                <button onclick="updateQuantity('qty3', -1)">-</button>
+                <input type="number" id="qty3" value="0" min="0">
+                <button onclick="updateQuantity('qty3', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('HyperX Alloy Origins 60', 'qty3', 5900)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Keyboards/Logitech G915 TKL Lightspeed.jpg" alt="Logitech G915 TKL Lightspeed">
+                <p>Logitech G915 TKL Lightspeed</p>
+                <p class="price">₱9,500</p>
+                <button onclick="updateQuantity('qty4', -1)">-</button>
+                <input type="number" id="qty4" value="0" min="0">
+                <button onclick="updateQuantity('qty4', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Logitech G915 TKL Lightspeed', 'qty4', 9500)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Keyboards/Razer Huntsman V2 TKL.jfif" alt="Razer Huntsman V2 TKL">
+                <p>Razer Huntsman V2 TKL</p>
+                <p class="price">₱6,300</p>
+                <button onclick="updateQuantity('qty5', -1)">-</button>
+                <input type="number" id="qty5" value="0" min="0">
+                <button onclick="updateQuantity('qty5', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Razer Huntsman V2 TKL', 'qty5', 6300)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Keyboards/Roccat Vulcan II Mini.jpg" alt="Roccat Vulcan II Mini">
+                <p>Roccat Vulcan II Mini</p>
+                <p class="price">₱7,100</p>
+                <button onclick="updateQuantity('qty6', -1)">-</button>
+                <input type="number" id="qty6" value="0" min="0">
+                <button onclick="updateQuantity('qty6', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Roccat Vulcan II Mini', 'qty6', 7100)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Keyboards/Roccat Vulkan TKL Pro.jpg" alt="Roccat Vulkan TKL Pro">
+                <p>Roccat Vulkan TKL Pro</p>
+                <p class="price">₱9,200</p>
+                <button onclick="updateQuantity('qty7', -1)">-</button>
+                <input type="number" id="qty7" value="0" min="0">
+                <button onclick="updateQuantity('qty7', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Roccat Vulkan TKL Pro', 'qty7', 9200)">Add to Cart</button>
+            </div>
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Keyboards/SteelSeries Apex Pro Mini Wireless.webp" alt="SteelSeries Apex Pro Mini Wireless">
+                <p>SteelSeries Apex Pro Mini Wireless</p>
+                <p class="price">₱8,700</p>
+                <button onclick="updateQuantity('qty8', -1)">-</button>
+                <input type="number" id="qty8" value="0" min="0">
+                <button onclick="updateQuantity('qty8', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('SteelSeries Apex Pro Mini Wireless', 'qty8', 8700)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="checkout">
+            <button onclick="checkout()">Checkout</button></br></br>
+            <a href="ProductList.html"><button>Back to Product List</button></a> <!-- Back button -->
+
+        </div>
+        <div class="footer">
+            <p>If you have any questions, please contact us at PalmaKills.com</p>
+        </div>
+    </div>
+    <script src="/Endterm/Website-Endterm-Examination-main/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - USB</title>
+    <link rel="stylesheet" href="/Endterm/Website-Endterm-Examination-main/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Shop - USB</h1>
+            <p>Select your USB and checkout</p>
+        </div>
+        <div class="grid">
+            <!-- Product 1 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/USB/Corsair Flash Survivor Stealth.jpg" alt="Corsair Flash Survivor Stealth">
+                <p>Corsair Flash Survivor Stealth</p>
+                <p class="price">Price: ₱1500</p>
+                <button onclick="updateQuantity('qty1', -1)">-</button>
+                <input type="number" id="qty1" value="0" min="0">
+                <button onclick="updateQuantity('qty1', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Corsair Flash Survivor Stealth', 'qty1', 1500)">Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/USB/Kingston IronKey Keypad 200.jpg" alt="Kingston IronKey Keypad 200">
+                <p>Kingston IronKey Keypad 200</p>
+                <p class="price">Price: ₱1800</p>
+                <button onclick="updateQuantity('qty2', -1)">-</button>
+                <input type="number" id="qty2" value="0" min="0">
+                <button onclick="updateQuantity('qty2', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Kingston IronKey Keypad 200', 'qty2', 1800)">Add to Cart</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/USB/PNY Turbo.jpg" alt="PNY Turbo">
+                <p>PNY Turbo</p>
+                <p class="price">Price: ₱2200</p>
+                <button onclick="updateQuantity('qty3', -1)">-</button>
+                <input type="number" id="qty3" value="0" min="0">
+                <button onclick="updateQuantity('qty3', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('PNY Turbo', 'qty3', 2200)">Add to Cart</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/USB/Samsung 32GB Bar MUF-32BE3.jfif" alt="Samsung 32GB Bar MUF-32BE3">
+                <p>Samsung 32GB Bar MUF-32BE3</p>
+                <p class="price">Price: ₱1900</p>
+                <button onclick="updateQuantity('qty4', -1)">-</button>
+                <input type="number" id="qty4" value="0" min="0">
+                <button onclick="updateQuantity('qty4', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Samsung 32GB Bar MUF-32BE3', 'qty4', 1900)">Add to Cart</button>
+            </div>
+            <!-- Product 5 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/USB/Samsung Fit Plus (MUF-128AB).jfif" alt="Samsung Fit Plus (MUF-128AB)">
+                <p>Samsung Fit Plus (MUF-128AB)</p>
+                <p class="price">Price: ₱2500</p>
+                <button onclick="updateQuantity('qty5', -1)">-</button>
+                <input type="number" id="qty5" value="0" min="0">
+                <button onclick="updateQuantity('qty5', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Samsung Fit Plus (MUF-128AB)', 'qty5', 2500)">Add to Cart</button>
+            </div>
+            <!-- Product 6 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/USB/SanDisk Cruzer CZ36.jpg" alt="SanDisk Cruzer CZ36">
+                <p>SanDisk Cruzer CZ36</p>
+                <p class="price">Price: ₱1700</p>
+                <button onclick="updateQuantity('qty6', -1)">-</button>
+                <input type="number" id="qty6" value="0" min="0">
+                <button onclick="updateQuantity('qty6', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('SanDisk Cruzer CZ36', 'qty6', 1700)">Add to Cart</button>
+            </div>
+            <!-- Product 7 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/USB/SanDisk Extreme Pro SDCZ880.jpg" alt="SanDisk Extreme Pro SDCZ880">
+                <p>SanDisk Extreme Pro SDCZ880</p>
+                <p class="price">Price: ₱1400</p>
+                <button onclick="updateQuantity('qty7', -1)">-</button>
+                <input type="number" id="qty7" value="0" min="0">
+                <button onclick="updateQuantity('qty7', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('SanDisk Extreme Pro SDCZ880', 'qty7', 1400)">Add to Cart</button>
+            </div>
+            <!-- Product 8 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/USB/SanDisk Ultra Dual Drive USB-C SDDDC2.jpg" alt="SanDisk Ultra Dual Drive USB-C SDDDC2">
+                <p>SanDisk Ultra Dual Drive USB-C SDDDC2</p>
+                <p class="price">Price: ₱2000</p>
+                <button onclick="updateQuantity('qty8', -1)">-</button>
+                <input type="number" id="qty8" value="0" min="0">
+                <button onclick="updateQuantity('qty8', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('SanDisk Ultra Dual Drive USB-C SDDDC2', 'qty8', 2000)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="checkout">
+            <button onclick="checkout()">Checkout</button><br><br>
+            <a href="ProductList.html"><button>Back to Product List</button></a> <!-- Back button -->
+        </div>
+        <div class="footer">
+            <p>If you have any questions, please contact us at PalmaKills.com</p>
+        </div>
+    </div>
+    <script src="/Endterm/Website-Endterm-Examination-main/script.js"></script>
+
+</body>
+</html>
+

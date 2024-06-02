@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9f5e9;
+        }
+        .receipt-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        .receipt-header {
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .receipt-header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #4caf50;
+        }
+        .receipt-header p {
+            margin: 0;
+            color: #4caf50;
+        }
+        .receipt-details {
+            margin-bottom: 20px;
+        }
+        .receipt-details div {
+            margin: 5px 0;
+            color: #4caf50;
+        }
+        .receipt-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .receipt-grid div {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .receipt-grid img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .receipt-total {
+            text-align: right;
+            margin-bottom: 20px;
+            color: #4caf50;
+        }
+        .receipt-total div {
+            margin: 5px 0;
+        }
+        .receipt-footer {
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+    <script>
+        function loadReceipt() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let receiptGrid = document.getElementById('receipt-grid');
+            let subtotal = 0;
+
+            cart.forEach(item => {
+                let total = item.price * item.quantity;
+                subtotal += total;
+
+                let div = document.createElement('div');
+                div.innerHTML = `
+                    <p><strong>${item.itemName}</strong></p>
+                    <p>Quantity: ${item.quantity}</p>
+                    <p>Price: ₱${item.price.toFixed(2)}</p>
+                    <p>Total: ₱${total.toFixed(2)}</p>
+                `;
+                receiptGrid.appendChild(div);
+            });
+
+            let tax = subtotal * 0.05;
+            let total = subtotal + tax;
+
+            document.getElementById('subtotal').innerText = `₱${subtotal.toFixed(2)}`;
+            document.getElementById('tax').innerText = `₱${tax.toFixed(2)}`;
+            document.getElementById('total').innerText = `₱${total.toFixed(2)}`;
+        }
+        window.onload = loadReceipt;
+    </script>
+</head>
+<body>
+    <div class="receipt-container">
+        <div class="receipt-header">
+            <h1>Receipt</h1>
+            <p>Thank you for your purchase!</p>
+        </div>
+        <div class="receipt-details">
+            <div><strong>Date:</strong> May 28, 2024</div>
+            <div><strong>Receipt No:</strong> 09123456789</div>
+            <div><strong>Customer:</strong> John Ezekil THe Great Gatsby</div>
+        </div>
+        <div class="receipt-grid" id="receipt-grid"></div>
+        <div class="receipt-total">
+            <div><strong>Subtotal:</strong> <span id="subtotal">₱0.00</span></div>
+            <div><strong>Tax (5%):</strong> <span id="tax">₱0.00</span></div>
+            <div><strong>Total:</strong> <span id="total">₱0.00</span></div>
+        </div>
+        <div class="receipt-footer">
+            <p>If you have any questions, please contact us at PalmaKills.com</p>
+        </div>
+    </div>
+</body>
+</html>

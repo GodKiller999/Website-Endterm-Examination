@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Mice</title>
+    <link rel="stylesheet" href="/Endterm/Website-Endterm-Examination-main/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Shop - Mice</h1>
+            <p>Select your mouse and checkout</p>
+        </div>
+        <div class="grid">
+            <!-- Product 1 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Mouse/Apple Magic Mouse.jpg" alt="Apple Magic Mouse">
+                <p>Apple Magic Mouse</p>
+                <p class="price">Price: ₱1500</p>
+                <button onclick="updateQuantity('qty1', -1)">-</button>
+                <input type="number" id="qty1" value="0" min="0">
+                <button onclick="updateQuantity('qty1', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Apple Magic Mouse', 'qty1', 1500)">Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Mouse/Logitech Ergo M575 Wireless Trackball.png" alt="Logitech Ergo M575 Wireless Trackball">
+                <p>Logitech Ergo M575 Wireless Trackball</p>
+                <p class="price">Price: ₱1800</p>
+                <button onclick="updateQuantity('qty2', -1)">-</button>
+                <input type="number" id="qty2" value="0" min="0">
+                <button onclick="updateQuantity('qty2', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Logitech Ergo M575 Wireless Trackball', 'qty2', 1800)">Add to Cart</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Mouse/Logitech Lift Ergonomic Vertical Mouse.webp" alt="Logitech Lift Ergonomic Vertical Mouse">
+                <p>Logitech Lift Ergonomic Vertical Mouse</p>
+                <p class="price">Price: ₱2200</p>
+                <button onclick="updateQuantity('qty3', -1)">-</button>
+                <input type="number" id="qty3" value="0" min="0">
+                <button onclick="updateQuantity('qty3', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Logitech Lift Ergonomic Vertical Mouse', 'qty3', 2200)">Add to Cart</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Mouse/Logitech MX Anywhere 3.jpg" alt="Logitech MX Anywhere 3">
+                <p>Logitech MX Anywhere 3</p>
+                <p class="price">Price: ₱1900</p>
+                <button onclick="updateQuantity('qty4', -1)">-</button>
+                <input type="number" id="qty4" value="0" min="0">
+                <button onclick="updateQuantity('qty4', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Logitech MX Anywhere 3', 'qty4', 1900)">Add to Cart</button>
+            </div>
+            <!-- Product 5 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Mouse/Logitech MX Master 3S.webp" alt="Logitech MX Master 3S">
+                <p>Logitech MX Master 3S</p>
+                <p class="price">Price: ₱2500</p>
+                <button onclick="updateQuantity('qty5', -1)">-</button>
+                <input type="number" id="qty5" value="0" min="0">
+                <button onclick="updateQuantity('qty5', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Logitech MX Master 3S', 'qty5', 2500)">Add to Cart</button>
+            </div>
+            <!-- Product 6 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Mouse/Microsoft Bluetooth Ergonomic Mouse.jpg" alt="Microsoft Bluetooth Ergonomic Mouse">
+                <p>Microsoft Bluetooth Ergonomic Mouse</p>
+                <p class="price">Price: ₱1700</p>
+                <button onclick="updateQuantity('qty6', -1)">-</button>
+                <input type="number" id="qty6" value="0" min="0">
+                <button onclick="updateQuantity('qty6', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Microsoft Bluetooth Ergonomic Mouse', 'qty6', 1700)">Add to Cart</button>
+            </div>
+            <!-- Product 7 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Mouse/Microsoft Modern Mobile Mouse.jpg" alt="Microsoft Modern Mobile Mouse">
+                <p>Microsoft Modern Mobile Mouse</p>
+                <p class="price">Price: ₱1400</p>
+                <button onclick="updateQuantity('qty7', -1)">-</button>
+                <input type="number" id="qty7" value="0" min="0">
+                <button onclick="updateQuantity('qty7', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Microsoft Modern Mobile Mouse', 'qty7', 1400)">Add to Cart</button>
+            </div>
+            <!-- Product 8 -->
+            <div class="grid-item">
+                <img src="/Endterm/Website-Endterm-Examination-main/Mouse/Razer Pro Click.jfif" alt="Razer Pro Click">
+                <p>Razer Pro Click</p>
+                <p class="price">Price: ₱2000</p>
+                <button onclick="updateQuantity('qty8', -1)">-</button>
+                <input type="number" id="qty8" value="0" min="0">
+                <button onclick="updateQuantity('qty8', 1)">+</button>
+                <br><br>
+                <button onclick="addToCart('Razer Pro Click', 'qty8', 2000)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="checkout">
+            <button onclick="checkout()">Checkout</button><br><br>
+            <a href="ProductList.html"><button>Back to Product List</button></a> <!-- Back button -->
+        </div>
+        <div class="footer">
+            <p>If you have any questions, please contact us at PalmaKills.com</p>
+        </div>
+    </div>
+    <script src="/Endterm/Website-Endterm-Examination-main/script.js"></script>
+
+</body>
+</html>
+
