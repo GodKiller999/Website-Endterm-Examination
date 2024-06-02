@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+   
+    <title>Shopping Cart Checkout</title>
+    <style>
+        table {
+            width: 35%;
+            margin: 30px auto;
+            border:1px solid black;
+        }
+        td {
+            padding: 20px;
+            text-align: center;
+        }
+       
+
+    
+    </style>
+</head>
+<body>
+
+<?php
+$products = [
+    ["item" => 1, "name" => "Product 1", "price" => 150, "quantity" => 2],
+    ["item" => 2, "name" => "Product 2", "price" => 200, "quantity" => 1],
+    ["item" => 3, "name" => "Product 3", "price" => 300, "quantity" => 3],
+];
+
+$subtotal = 0;
+$shipping_fee = 50.00;
+$discount_threshold = 500.00;
+$discount_rate = 0.05;
+
+echo "<table>";
+echo "<tr><th>Item</th><th>Product Name</th><th>Price (P)</th><th>Quantity</th><th>Total Price (P)</th></tr>";
+
+foreach ($products as $product) {
+    $total_price = $product['price'] * $product['quantity'];
+    echo "<tr>";
+    echo "<td>" . $product['item'] . "</td>";
+    echo "<td>" . $product['name'] . "</td>";
+    echo "<td>" . number_format($product['price'], 2) . "</td>";
+    echo "<td>" . $product['quantity'] . "</td>";
+    echo "<td>" . number_format($total_price, 2) . "</td>";
+    echo "</tr>";
+    $subtotal += $total_price;
+}
+
+echo "<tr class='total-row'><td colspan='4'>Subtotal</td><td>" . number_format($subtotal, 2) . "</td></tr>";
+
+
+if ($subtotal >= $discount_threshold) {
+    $discount = $subtotal * $discount_rate;
+    echo "<tr class='total-row'><td colspan='4'>Discount (5%)</td><td>-" . number_format($discount, 2) . "</td></tr>";
+    $subtotal -= $discount;
+}
+
+$total = $subtotal + $shipping_fee;
+
+echo "<tr class='total-row'><td colspan='4'>Shipping Fee</td><td>" . number_format($shipping_fee, 2) . "</td></tr>";
+echo "<tr class='total-row'><td colspan='4'>Total</td><td>" . number_format($total, 2) . "</td></tr>";
+echo "</table>";
+?>
+
+</body>
+</html>
